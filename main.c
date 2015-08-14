@@ -1,4 +1,4 @@
-pragma config(Motor,  port1,           FrontRight,    tmotorVex393_HBridge, openLoop, reversed, driveRight)
+#pragma config(Motor,  port1,           FrontRight,    tmotorVex393_HBridge, openLoop, reversed, driveRight)
 #pragma config(Motor,  port2,           BackRight,     tmotorVex393_MC29, openLoop, reversed, driveRight)
 #pragma config(Motor,  port3,           FrontLeft,     tmotorVex393_MC29, openLoop, driveLeft)
 #pragma config(Motor,  port4,           BackLeft,      tmotorVex393_MC29, openLoop, driveLeft)
@@ -18,41 +18,19 @@ pragma config(Motor,  port1,           FrontRight,    tmotorVex393_HBridge, open
 
 #include "Vex_Competition_Includes.c"   //Main competition background code...do not modify!
 
-
+//Pre-Autonomous
 void pre_auton()
 {
-	// Set bStopTasksBetweenModes to false if you want to keep user created tasks running between
-	// Autonomous and Tele-Op modes. You will need to manage all user created tasks if set to false.
 	bStopTasksBetweenModes = true;
-
-	// All activities that occur before the competition starts
-	// Example: clearing encoders, setting servo positions, ...
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////
-//
-//                                 Autonomous Task
-//
-// This task is used to control your robot during the autonomous phase of a VEX Competition.
-// You must modify the code to add your own robot specific commands here.
-//
-/////////////////////////////////////////////////////////////////////////////////////////
-
+//Autonomous
 task autonomous()
 {
-
 	AutonomousCodePlaceholderForTesting();  // Remove this function call once you have "real" code.
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////
-//
-//                                 User Control Task
-//
-// This task is used to control your robot during the user control phase of a VEX Competition.
-// You must modify the code to add your own robot specific commands here.
-//
-/////////////////////////////////////////////////////////////////////////////////////////
-
+//User Control
 task usercontrol()
 {
 	while (1 == 1)
@@ -73,21 +51,21 @@ task usercontrol()
 		else if(vexRT[Btn5U] == 0)
 		{
 			motor[port5] = 0;
-	  }
+		}
 
-	  if(vexRT[Btn8D] == 1)
-	  {
-	  	motor[port6] = 100;
-	  	motor[port7] = 100;
-	  	motor[port8] = 100;
-	  	motor[port9] = 100;
-	  }
-	  else if(vexRT[Btn8R] == 1)
-	  {
-	  	motor[port6] = 0;
-	  	motor[port7] = 0;
-	  	motor[port8] = 0;
-	  	motor[port9] = 0;
-	  }
- }
+		if(vexRT[Btn8D] == 1)
+		{
+			motor[port6] = 100;
+			motor[port7] = 100;
+			motor[port8] = 100;
+			motor[port9] = 100;
+		}
+		else if(vexRT[Btn8R] == 1)
+		{
+			motor[port6] = 0;
+			motor[port7] = 0;
+			motor[port8] = 0;
+			motor[port9] = 0;
+		}
+	}
 }
