@@ -59,8 +59,24 @@ task usercontrol()
 		}
 
 
-		//Fly Wheel 90 Speed
+		//Fly Wheel 95 Speed
 		if(vexRT[Btn8R] == 1)
+		{
+			motor[TRF] = 95;
+			motor[TLF] = 95;
+			motor[BRF] = 95;
+			motor[BLF] = 95;
+		}
+		else if(vexRT[Btn8D] == 1)
+		{
+			motor[TRF] = 0;
+			motor[TLF] = 0;
+			motor[BRF] = 0;
+			motor[BLF] = 0;
+		}
+
+		//Fly Wheel 90 Speed
+		if(vexRT[Btn8U] == 1)
 		{
 			motor[TRF] = 90;
 			motor[TLF] = 90;
@@ -76,7 +92,7 @@ task usercontrol()
 		}
 
 		//Fly Wheel 85 Speed
-		if(vexRT[Btn8U] == 1)
+		if(vexRT[Btn8L] == 1)
 		{
 			motor[TRF] = 85;
 			motor[TLF] = 85;
@@ -91,13 +107,45 @@ task usercontrol()
 			motor[BLF] = 0;
 		}
 
-		//Fly Wheel 80 Speed
-		if(vexRT[Btn8L] == 1)
+		//Fly Wheel 100 Speed
+		if(vexRT[Btn7L] == 1)
 		{
-			motor[TRF] = 80;
-			motor[TLF] = 80;
-			motor[BRF] = 80;
-			motor[BLF] = 80;
+			motor[TRF] = 100;
+			motor[TLF] = 100;
+			motor[BRF] = 100;
+			motor[BLF] = 100;
+		}
+		else if(vexRT[Btn8D] == 1)
+		{
+			motor[TRF] = 0;
+			motor[TLF] = 0;
+			motor[BRF] = 0;
+			motor[BLF] = 0;
+		}
+
+		//Fly Wheel 105 Speed
+		if(vexRT[Btn7U] == 1)
+		{
+			motor[TRF] = 105;
+			motor[TLF] = 105;
+			motor[BRF] = 105;
+			motor[BLF] = 105;
+		}
+		else if(vexRT[Btn8D] == 1)
+		{
+			motor[TRF] = 0;
+			motor[TLF] = 0;
+			motor[BRF] = 0;
+			motor[BLF] = 0;
+		}
+
+		//Fly Wheel 110 Speed
+		if(vexRT[Btn7R] == 1)
+		{
+			motor[TRF] = 110;
+			motor[TLF] = 110;
+			motor[BRF] = 110;
+			motor[BLF] = 110;
 		}
 		else if(vexRT[Btn8D] == 1)
 		{
